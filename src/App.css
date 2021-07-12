@@ -1,38 +1,77 @@
+@import '~antd/dist/antd.css';
+
 .App {
+  background: -webkit-radial-gradient(#BF0060, #7E3D76);
+  background: -o-radial-gradient(#BF0060, #7E3D76);
+  background: -moz-radial-gradient(#BF0060, #7E3D76);
+  background: radial-gradient(#BF0060, #7E3D76);
   text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App-title {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  color: snow;
+  font-size: 3em;
+  margin: auto;
 }
 
-.App-link {
-  color: #61dafb;
+.App-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: snow;
+  margin: auto;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.App-button {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: snow;
+  margin: auto;
+}
+
+.question {
+  color: snow;
+}
+
+.question:hover {
+  color: snow;
+}
+
+.question:focus {
+  color: snow;
+}
+
+.divText{
+  color: snow;
+}
+
+.sub {
+  background-color: orange;
+  border-color: orange;
+}
+
+.sub:hover {
+  background-color: gold;
+  border-color: gold;
+}
+
+.sub:focus {
+  background-color: gold;
+  border-color: gold;
 }
