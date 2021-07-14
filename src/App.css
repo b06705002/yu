@@ -75,3 +75,57 @@
   background-color: gold;
   border-color: gold;
 }
+
+.main {
+  background: -webkit-radial-gradient(#ffb3e6, #ba55d3);
+  background: -o-radial-gradient(#ffb3e6, #ba55d3);
+  background: -moz-radial-gradient(#ffb3e6, #ba55d3);
+  background: radial-gradient(#ffb3e6, #ba55d3);
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  margin: auto;
+}
+
+.App-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  margin: auto;
+}
+
+.App-letter {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: snow;
+  margin: auto;
+}
+
+.App-com {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 3em;
+  color: snow;
+  margin: auto;
+}
+
+.show:hover {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.show:focus {
+  background-color: transparent;
+  border-color: transparent;
+}

@@ -2,6 +2,7 @@ import './App.css';
 import { Form, Input, Button, Modal, message, Divider, Image } from 'antd';
 import React, { useState } from 'react';
 import Clock from './Clock'
+import Content from './Content'
 
 const App = () => {
 
@@ -11,10 +12,6 @@ const App = () => {
   const [visible4, setVisible4] = useState(false);
   const [visible5, setVisible5] = useState(false);
   const [page, setPage] = useState("Out");
-
-  // const success = () => {
-  //   message.success('發送成功');
-  // };
 
   const error = () => {
     message.error('回答錯了 你這個笨蛋:(');
@@ -26,7 +23,6 @@ const App = () => {
     } else {
       error()
     }
-    console.log(values)
   }
 
   return (
@@ -101,7 +97,7 @@ const App = () => {
         </div>
       </div>
       :
-      <div>Hi</div>
+      <Content />
       }
     </>
   );
