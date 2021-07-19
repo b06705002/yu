@@ -1,8 +1,9 @@
 import './App.css';
 import Cards from './Card';
-import { Button, Tooltip, Card, Avatar } from "antd";
+import { Button, Tooltip, Card, Avatar, Divider, Modal } from "antd";
 import Icon from '@ant-design/icons';
 import { useState } from 'react';
+import { GiftOutlined } from '@ant-design/icons';
 
 const HeartSvg = () => (
     <svg width="1em" height="1em" fill="currentColor" viewBox="0 0 1024 1024">
@@ -15,6 +16,7 @@ const { Meta } = Card;
 const Content = () => {
 
     const [card, setCard] = useState(true);
+    const [giftCard, setGiftCard] = useState(false);
 
     const change = () => {
         setCard(!card)
@@ -38,11 +40,23 @@ const Content = () => {
                         <Meta
                             avatar={<Avatar src="./gir.png" />}
                             title="給胖寶寶的生日祝福"
-                            description="This is the description"
+                            description="又是一年的生日，恭喜妳又老了一歲。22歲並不算是個特別的年。妳曾和我說過妳對學業、工作沒有自信。我覺得，只有對自己設有高標準、有上進心的人，才會擔心這些事情。因此，我希望妳可以打起精神繼續努力，我會為你加油，也會多拜拜請神保佑妳。祝福今年的妳身體健康、平安喜樂。"
                         />
+                        <Divider></Divider>
+                        <Button className="show" onClick={() => setGiftCard(true)}>
+                            <GiftOutlined />
+                        </Button>
                     </Card>
                 </div>
             </div>
+            <Modal title="生日挑禮物卷" visible={giftCard} onOk={() => setGiftCard(false)} onCancel={() => setGiftCard(false)}
+                okText="確認" cancelText="取消">
+                <p>恭喜你找到禮物卷啦</p>
+                <p>截圖即可像黃啟宏帥哥本人兌換獎項</p>
+                <p>陪你逛街+挑禮物喔</p>
+                <p>但是要實體喔，不接受網路逛街謝謝</p>
+                <p>使用期限: 2021/12/31</p>
+            </Modal>
         </div>
     );
 }
